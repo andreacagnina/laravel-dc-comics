@@ -14,8 +14,18 @@ class ComicsTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
-        //
+        for ($i = 0; $i < 20; $i++) {
+            $comic = new Comic();
+            $comic->title = $faker->words(3, true);
+            $comic->author = $faker->firstName() . ' ' . $comic->lastName();
+            $comic->description = $faker->paragraph();
+            $comic->price = $faker->randomFloat(2, 0);
+            $comic->release = $faker->date('d/m/y');
+            $comic->type = $faker->word();
+
+            $comic->save();
+        }
     }
 }
