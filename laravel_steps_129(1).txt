@@ -21,12 +21,11 @@ CREAZIONE DI UN PROGETTO A PARTIRE DA UNA REPO TEMPLATE
 
 Una volta creata la repo template, per creare un nuovo progetto partite dal punto 4
 
+//VECCHIO METODO 1.1-per creare una tabella conviene utilizzare come nome della migration create_nome_tabella_table (es php artisan make:migration create_houses_table)
 
-1.1-per creare una tabella conviene utilizzare come nome della migration create_nome_tabella_table (es php artisan make:migration create_houses_table)
+//NUOVO METODO CREA INSIEME UNA MIGRATION E UN MODEL php artisan make:model Comic -m
 
-
-
-1.2- realizzo la tabella in up (es $table->string('title', 50); $table->year('year'); $table->float('vote', 2, 1);) $table-> e $table->timestamps sono di default e restano sempre.
+1.2- realizzo la tabella in up di Model (es $table->string('title', 50); $table->year('year'); $table->float('vote', 2, 1);) $table-> e $table->timestamps sono di default e restano sempre.
 
 1.2.1- se voglio aggiornare una tabella uso il comando php artisan make:migration nome_della_migration --table=nometabella (es. php artisan make:migration update_house_table --table=houses)
 1.2.2- modificare la nuova migrazione per esempio e dopo lanciare il comando php artisan migrate
