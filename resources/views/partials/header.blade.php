@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12">
             <div class="">
-                <ul class="list-unstyled d-flex justify-content-center">
+                <ul class="list-unstyled d-flex justify-content-center m-0">
                     <li>
                         <a class="text-decoration-none" href="{{ route('homepage') }}">Home</a>
                     </li>
