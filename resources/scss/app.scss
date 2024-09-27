@@ -1,1 +1,36 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+    font-family: 'Roboto',
+        'sans-serif';
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+header {
+    background-color: gainsboro;
+
+    ul {
+        li {
+            display: flex;
+            align-items: center;
+            padding: 30px 15px;
+            height: 100%;
+
+
+            a {
+                color: black;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+        }
+    }
+}

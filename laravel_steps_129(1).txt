@@ -87,7 +87,7 @@ in web fare l'use di PastaController
 
 e route::resource('pastas', PastaController::class);
 
---3-- creo il controller relativo al Model con il comando php artisan make:controller NomeController. Il nome del model deve essere in pascalcase e singolare es(php artisan make:controller MovieController). --
+//VECCHIO METODO 3-- creo il controller relativo al Model con il comando php artisan make:controller NomeController. Il nome del controller deve essere in pascalcase e singolare es(php artisan make:controller MovieController). --
 
 specifico la model da usare es: use App\Models\Train;
 e definisco i metodi che mi restituiscono i record della tabella per mostrarli alla view es class TrainController extends Controller
