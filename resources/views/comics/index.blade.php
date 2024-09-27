@@ -4,8 +4,13 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12">
-                <div class="content text-center">
-                    <h1>Comics</h1>
+                <div class="content text-center d-flex justify-content-between align-items-center">
+                    <div>
+                        <h1>Comics</h1>
+                    </div>
+                    <div>
+                        <a href="{{ Route('comics.create') }}"><i class="fa-solid fa-plus"></i> Add</a>
+                    </div>
                 </div>
             </div>
         </div>
