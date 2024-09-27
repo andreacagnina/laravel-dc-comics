@@ -7,7 +7,7 @@
                         <a class="text-decoration-none" href="{{ route('homepage') }}">Home</a>
                     </li>
                     <li>
-                        <a class="text-decoration-none" href="{{route'comics'}}">Comics</a>
+                        <a class="text-decoration-none" href="{{ route('comics') }}">Comics</a>
                     </li>
                 </ul>
             </div>
