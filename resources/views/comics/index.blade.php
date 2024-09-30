@@ -46,7 +46,7 @@
                                             method="post">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm"><i
+                                            <button type="submit" class="btn btn-sm p-0"><i
                                                     class="fa-solid fa-trash text-danger"></i>
                                         </form>
                                     </td>
