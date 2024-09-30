@@ -46,7 +46,7 @@
                                             method="post">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm p-0"><i
+                                            <button type="submit" class="btn btn-sm p-0 delete"><i
                                                     class="fa-solid fa-trash text-danger"></i>
                                         </form>
                                     </td>
@@ -59,4 +59,5 @@
             </div>
         </div>
     </div>
+    @include('comics.partials.modal_delete')
 @endsection
