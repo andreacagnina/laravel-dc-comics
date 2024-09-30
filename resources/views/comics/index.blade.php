@@ -40,7 +40,7 @@
                                                 href="{{ route('comics.show', ['comic' => $comic->id]) }}"><i
                                                     class="fa-solid fa-eye"></i></a></td>
                                         <td><a class="text-warning"
-                                                href="{{ route('comics.show', ['comic' => $comic->id]) }}"><i
+                                                href="{{ route('comics.edit', ['comic' => $comic->id]) }}"><i
                                                     class="fa-solid fa-pen-to-square"></i></a></td>
                                         <td><a class="text-danger"
                                                 href="{{ route('comics.show', ['comic' => $comic->id]) }}"><i
