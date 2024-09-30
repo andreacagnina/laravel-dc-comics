@@ -35,8 +35,17 @@
                                     <td>{{ $comic->release_date }}</td>
                                     <td>{{ $comic->price }} &euro;</td>
                                     <td>{{ $comic->type }}</td>
-                                    <td><a href="{{ route('comics.show', ['comic' => $comic->id]) }}"><i
-                                                class="fa-solid fa-eye"></i></a></td>
+                                    <div class="d-flex justify-between">
+                                        <td><a class="text-success"
+                                                href="{{ route('comics.show', ['comic' => $comic->id]) }}"><i
+                                                    class="fa-solid fa-eye"></i></a></td>
+                                        <td><a class="text-warning"
+                                                href="{{ route('comics.show', ['comic' => $comic->id]) }}"><i
+                                                    class="fa-solid fa-pen-to-square"></i></a></td>
+                                        <td><a class="text-danger"
+                                                href="{{ route('comics.show', ['comic' => $comic->id]) }}"><i
+                                                    class="fa-solid fa-trash"></i></a></td>
+                                    </div>
                                 </tr>
                             @endforeach
                         </tbody>
