@@ -35,17 +35,22 @@
                                     <td>{{ $comic->release_date }}</td>
                                     <td>{{ $comic->price }} &euro;</td>
                                     <td>{{ $comic->type }}</td>
-                                    <div class="d-flex justify-between">
-                                        <td><a class="text-success"
-                                                href="{{ route('comics.show', ['comic' => $comic->id]) }}"><i
-                                                    class="fa-solid fa-eye"></i></a></td>
-                                        <td><a class="text-warning"
-                                                href="{{ route('comics.edit', ['comic' => $comic->id]) }}"><i
-                                                    class="fa-solid fa-pen-to-square"></i></a></td>
-                                        <td><a class="text-danger"
-                                                href="{{ route('comics.show', ['comic' => $comic->id]) }}"><i
-                                                    class="fa-solid fa-trash"></i></a></td>
-                                    </div>
+                                    <td class="d-flex justify-content-between align-items-center"><a class="text-success"
+                                            href="{{ route('comics.show', ['comic' => $comic->id]) }}"><i
+                                                class="fa-solid fa-eye"></i></a>
+                                        <a class="text-warning"
+                                            href="{{ route('comics.edit', ['comic' => $comic->id]) }}"><i
+                                                class="fa-solid fa-pen-to-square"></i></a>
+
+                                        <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}"
+                                            method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm"><i
+                                                    class="fa-solid fa-trash text-danger"></i>
+                                        </form>
+                                    </td>
+
                                 </tr>
                             @endforeach
                         </tbody>
