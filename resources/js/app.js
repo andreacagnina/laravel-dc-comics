@@ -17,7 +17,16 @@ delete_buttons.forEach((button) => {
         const bootstrap_modal = new bootstrap.Modal(modal);
 
         bootstrap_modal.show();
-        const buttonDelete = modal.querySelector('.confirm-delete')
+        const buttonDelete = modal.querySelector('.confirm-delete');
+
+        const comicTitle = button.getAttribute('data-comictitle');
+
+        const ModalText = modal.querySelector('#modal_text');
+        ModalText.innerText = `Sei sicuro di volere cancellare ${comicTitle}`;
+
+        buttonDelete.addEventListener('click', function () {
+            button.parentElement.submit();
+        })
     }
     );
 })

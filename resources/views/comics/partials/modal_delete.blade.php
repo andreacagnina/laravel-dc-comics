@@ -8,7 +8,7 @@
                 <h5 class="modal-title" id="deleteModalLabel">Conferma cancellazione </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" id="modal_text">
                 Sei sicuro di voler eliminare questo comic?
             </div>
             <div class="modal-footer">
