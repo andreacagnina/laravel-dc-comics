@@ -17,4 +17,4 @@ use App\Http\Controllers\HomeController as HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
 Route::resource('comics', ComicController::class);
-Route::get('/edit', [HomeController::class, 'edit'])->name('edit');
+Route::get('/{comic}/edit', [HomeController::class, 'edit'])->name('edit');
