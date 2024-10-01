@@ -35,8 +35,11 @@
 
                         <div class="mb-3">
                             <label class="form-label" for="price">Price</label>
-                            <input class="form-control @error('price') is-invalid @enderror" type="number" name="price"
-                                id="price" autocomplete="off" value="{{ old('price') }}">
+                            <div class="input-group">
+                                <span class="input-group-text" id="inputGroupPrepend2">&euro;</span>
+                                <input class="form-control @error('price') is-invalid @enderror" type="number"
+                                    name="price" id="price" autocomplete="off" value="{{ old('price') }}">
+                            </div>
                             @error('price')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
