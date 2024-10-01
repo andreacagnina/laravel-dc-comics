@@ -12,42 +12,44 @@
                         <div class="mb-3">
                             <label class="form-label" for="title">Title</label>
 
-                            <input class="form-control" type="text" name="title" id="title"
-                                value="{{ $comic->title }}" autocomplete="off">
+                            <input class="form-control @error('title') is-invalid @enderror" type="text" name="title"
+                                id="title" value="{{ old('title', $comic->title) }}" autocomplete="off">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label" for="author">Author</label>
 
-                            <input class="form-control" type="text" name="author" id="author"
-                                value="{{ $comic->author }}" autocomplete="off">
+                            <input class="form-control @error('author') is-invalid @enderror" type="text" name="author"
+                                id="author" value="{{ old('author', $comic->author) }}" autocomplete="off">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label" for="description">Description</label>
 
-                            <textarea class="form-control" name="description" id="description" autocomplete="off">{{ $comic->description }}</textarea>
+                            <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description"
+                                autocomplete="off">{{ old('description', $comic->description) }}</textarea>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label" for="price">Price</label>
 
-                            <input class="form-control" type="number" name="price" id="price"
-                                value="{{ $comic->price }}" autocomplete="off">
+                            <input class="form-control @error('price') is-invalid @enderror" type="number" name="price"
+                                id="price" value="{{ old('price', $comic->price) }}" autocomplete="off">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label" for="release_date">Release Date</label>
 
-                            <input class="form-control" type="date" name="release_date" id="release_date"
-                                value="{{ $comic->release_date }}" autocomplete="off">
+                            <input class="form-control @error('release_date') is-invalid @enderror" type="date"
+                                name="release_date" id="release_date"
+                                value="{{ old('release_date', $comic->release_date) }}" autocomplete="off">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label" for="type">Type</label>
 
-                            <input class="form-control" type="text" name="type" id="type"
-                                value="{{ $comic->type }}" autocomplete="off">
+                            <input class="form-control @error('type') is-invalid @enderror" type="text" name="type"
+                                id="type" value="{{ old('type', $comic->type) }}" autocomplete="off">
                         </div>
 
                         <div class="mb-3">
