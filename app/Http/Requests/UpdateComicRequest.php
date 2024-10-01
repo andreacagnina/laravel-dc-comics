@@ -33,5 +33,22 @@ class UpdateComicRequest extends FormRequest
         ];
     }
 
-    public function messages() {}
+    public function messages()
+    {
+        return [
+            'title.required' => 'Devi indicare un titolo',
+            'title.max' => 'Questo campo supera i limiti consentiti',
+            'author.required' => 'Devi indicare un autore',
+            'author.max' => 'Questo campo supera i limiti consentiti',
+            'description.max' => 'Questo campo supera i limiti consentiti',
+            'price.request' => 'Devi indicare un prezzo per questo articolo',
+            'price.numeric' => 'In questo campo non puoi inserire lettere o simboli',
+            'price.min' => 'Questo campo non può essere inferiore a 0',
+            'price.min' => 'Questo campo non può essere superiore a 9999.99',
+            'release_date.required' => 'Devi indicare una data',
+            'release_date.date' => 'Questo campo deve essere una data',
+            'type.required' => 'Devi indicare una categoria',
+            'type.max' => 'Questo campo supera i limiti consentiti',
+        ];
+    }
 }
