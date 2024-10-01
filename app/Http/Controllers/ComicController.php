@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Comic;
 use App\Http\Requests\StoreComicRequest;
 use App\Http\Requests\UpdateComicRequest;
+use Carbon\Carbon;
 
 class ComicController extends Controller
 {
@@ -38,8 +39,7 @@ class ComicController extends Controller
      */
     public function store(StoreComicRequest $request)
     {
-        $form_data = $request->all();
-
+        $form_data = $request->validated();
         Comic::create($form_data);
         return redirect()->route('comics.index');
     }
@@ -75,7 +75,7 @@ class ComicController extends Controller
      */
     public function update(UpdateComicRequest $request, Comic $comic)
     {
-        $form_data = $request->all();
+        $form_data = $request->validated();
         $comic->update($form_data);
         return redirect()->route('comics.show', ['comic' => $comic->id]);
     }
