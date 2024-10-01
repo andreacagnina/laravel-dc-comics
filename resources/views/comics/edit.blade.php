@@ -44,7 +44,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="inputGroupPrepend2">&euro;</span>
                                 <input class="form-control @error('price') is-invalid @enderror" type="number"
-                                    min="0" name="price" id="price" value="{{ old('price', $comic->price) }}"
+                                    min="1" name="price" id="price" value="{{ old('price', $comic->price) }}"
                                     autocomplete="off">
                             </div>
                             @error('price')
